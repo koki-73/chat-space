@@ -1,0 +1,15 @@
+.side-bar {
+  height: 100vh;
+  width: 300px;
+
+    &__user-name {
+      background-color: #253141;
+      height: 100px;
+    }
+
+    &__chat-index {
+      background-color: #2f3e51;
+      height: calc(100vh - 100px);
+    }
+}
+
