@@ -1,15 +1,66 @@
 .side-bar {
   height: 100vh;
   width: 300px;
-
     &__user-name {
       background-color: #253141;
       height: 100px;
+      display: flex;
+      align-items: center;
     }
-
     &__chat-index {
       background-color: #2f3e51;
       height: calc(100vh - 100px);
     }
 }
+
+.top-item {
+  height: 20px;
+  width: 260px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+  &__user-name{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  &__icon {
+    width: 60px;
+    text-align: right;
+    a {
+      text-decoration: none;
+
+      .edit {
+        margin-right: 5px;
+        color: #ffffff;
+      }
+
+      .cog {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.side-item {
+  height: 91px;
+  width: 260px;
+  margin: 0 auto;
+  color: #ffffff;
+  font-weight: bold;
+  &__chat-title {
+    font-size: 15px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+  &__newest-message {
+    font-size: 11px;
+    padding-bottom: 40px;
+  }
+}
+
+
+
+
 

@@ -1,4 +1,32 @@
 .main-chat
-  .main-chat__title
-  .main-chat__body
-  .main-chat__form
+  .main-header
+    .main-header__info
+      .current-title test_title
+      .current-member Member : test_member
+    .main-header__edit-btn
+      =link_to "edit", "$$$"
+  .main-body
+    .message
+      .message__info
+        .sender-name hoge
+        .send-date yyyy-mm-dd-hh-mm-ss
+      .message__text sample_text
+    .message
+      .message__info
+        .sender-name hoge
+        .send-date yyyy-mm-dd-hh-mm-ss
+      .message__text sample_text
+    .message
+      .message__info
+        .sender-name hoge
+        .send-date yyyy-mm-dd-hh-mm-ss
+      .message__text sample_text
+  .main-form
+    -# = form_for (@message), html: { class: "post-form"} do |f|
+    %form.post-form
+      %input.post-form__text{placeholder: "type a message"}
+      %label.post-form__picture
+        = icon('fas', 'image', class: "image")
+        %input{type: "file", class: "image-input"}
+    %input.send-btn{type: "submit", value: "Send"}
+    
