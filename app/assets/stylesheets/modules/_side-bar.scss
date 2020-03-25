@@ -13,6 +13,8 @@
     }
 }
 
+$item-color: #ffffff;
+
 .top-item {
   height: 20px;
   width: 260px;
@@ -21,7 +23,7 @@
   justify-content: space-between;
   line-height: 20px;
   &__user-name{
-    color: #ffffff;
+    color: $item-color;
     font-weight: bold;
     font-size: 16px;
   }
@@ -33,11 +35,11 @@
 
       .edit {
         margin-right: 5px;
-        color: #ffffff;
+        color: $item-color;
       }
 
       .cog {
-        color: #ffffff;
+        color: $item-color;
       }
     }
   }
@@ -47,7 +49,7 @@
   height: 91px;
   width: 260px;
   margin: 0 auto;
-  color: #ffffff;
+  color: $item-color;
   font-weight: bold;
   &__chat-title {
     font-size: 15px;
