@@ -55,6 +55,10 @@ $item-color: #ffffff;
     font-size: 15px;
     padding-top: 20px;
     padding-bottom: 5px;
+    a {
+      text-decoration: none;
+      color: $item-color;
+    }
   }
   &__newest-message {
     font-size: 11px;
