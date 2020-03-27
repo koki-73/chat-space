@@ -46,6 +46,7 @@
   height: calc(100vh - 190px);
   padding-left: 40px;
   padding-top: 35px;
+  overflow: auto;
   .message {
     &__info {
       display: flex;
@@ -100,6 +101,7 @@
       right: 130px;
       top: 10px;
     .image {
+      cursor: pointer;
       font-size: inherit;
       display: inline-block;
     }

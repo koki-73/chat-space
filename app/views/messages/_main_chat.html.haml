@@ -6,20 +6,13 @@
     .main-header__edit-btn
       =link_to "Edit", "#"
   .main-body
-    .message
-      -@messages.each do |message|
-        .message__info
-          .sender-name
-            = message.user.name
-          .send-date
-            = message.created_at
-        .message__text
-          = message.content
+    = render @messages
   .main-form
     = form_for [@group, @message] do |f|
       .post-form
         = f.text_field :content, class: "post-form__text", placeholder: "type a message"
         .post-form__picture
-          = icon('fas', 'image', class: "image")
-          = f.file_field :image, class: "image-input"
+          = f.label :image do
+            = icon('fas', 'image', class: "image")
+            = f.file_field :image, class: "image-input"
         = f.submit "Send", class: "send-btn"
