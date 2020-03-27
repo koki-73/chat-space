@@ -1,32 +1,23 @@
 .main-chat
   .main-header
     .main-header__info
-      .current-title test_title
-      .current-member Member : test_member
+      .current-title
+        = @group.name
+      .current-member
+        Member : 
+        - @group.users.each do |user|
+          = user.name
     .main-header__edit-btn
-      =link_to "Edit", "#"
+      =link_to edit_group_path(@group.id) do
+        = "Edit"
   .main-body
-    .message
-      .message__info
-        .sender-name hoge
-        .send-date yyyy-mm-dd-hh-mm-ss
-      .message__text sample_text
-    .message
-      .message__info
-        .sender-name hoge
-        .send-date yyyy-mm-dd-hh-mm-ss
-      .message__text sample_text
-    .message
-      .message__info
-        .sender-name hoge
-        .send-date yyyy-mm-dd-hh-mm-ss
-      .message__text sample_text
+    = render @messages
   .main-form
-    -# = form_for (@message), html: { class: "post-form"} do |f|
-    %form.post-form
-      %input.post-form__text{placeholder: "type a message"}
-      %label.post-form__picture
-        = icon('fas', 'image', class: "image")
-        %input{type: "file", class: "image-input"}
-    %input.send-btn{type: "submit", value: "Send"}
-    
+    = form_for [@group, @message] do |f|
+      .post-form
+        = f.text_field :content, class: "post-form__text", placeholder: "type a message"
+        .post-form__picture
+          = f.label :image do
+            = icon('fas', 'image', class: "image")
+            = f.file_field :image, class: "image-input"
+        = f.submit "Send", class: "send-btn"

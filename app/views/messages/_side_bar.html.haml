@@ -12,7 +12,7 @@
     - current_user.groups.each do |group|
       .side-item
         .side-item__chat-title
-          = group.name
+          = link_to group_messages_path(group) do
+            = group.name
         .side-item__newest-message
-          no message
-    
+          = group.show_last_message

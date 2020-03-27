@@ -46,6 +46,7 @@
   height: calc(100vh - 190px);
   padding-left: 40px;
   padding-top: 35px;
+  overflow: auto;
   .message {
     &__info {
       display: flex;
@@ -75,42 +76,49 @@
   padding: 20px 40px;
   display: flex;
   align-items: center;
-  .post-form {
-    height: 50px;
-    width: calc(100vw - 493px);
-    display: flex;
-    position: relative;
-    &__text {
-      height: 50px;
-      width: 100%;
-      padding-left: 10px;
-      padding-right: 40px;
-      border: none;
-    }
-    &__picture {
-      font-size: 1.3rem;
-      cursor: pointer;
-      position: absolute;
-        right: 10px;
-        top: 10px;
-      .image {
-        font-size: inherit;
-        display: inline-block;
-      }
-      .image-input {
-        display: none;
-      }
-    }
-  }
+}
 
-  .send-btn {
+.new_message {
+  width: 100%;
+}
+
+.post-form {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  &__text {
     height: 50px;
-    width: 98px;
-    background-color: #38aef0;
-    margin-left: 15px;
-    color: #ffffff;
-    line-height: 50px;
-    text-align: center;
-    cursor: pointer;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 40px;
+    border: none;
   }
+  &__picture {
+    font-size: 1.3rem;
+    cursor: pointer;
+    position: absolute;
+      right: 130px;
+      top: 10px;
+    .image {
+      cursor: pointer;
+      font-size: inherit;
+      display: inline-block;
+    }
+    .image-input {
+      display: none;
+    }
+  }
+  
+}
+
+.send-btn {
+  height: 50px;
+  width: 120px;
+  background-color: #38aef0;
+  margin-left: 15px;
+  color: #ffffff;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
 }
