@@ -1,8 +1,12 @@
 .main-chat
   .main-header
     .main-header__info
-      .current-title test_title
-      .current-member Member : test_member
+      .current-title
+        = @group.name
+      .current-member
+        Member : 
+        - @group.users.each do |user|
+          = user.name
     .main-header__edit-btn
       =link_to "Edit", "#"
   .main-body
