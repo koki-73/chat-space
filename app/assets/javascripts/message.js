@@ -51,7 +51,6 @@ $(function(){
         $('.main-body').append(insertHTML);
         $('.main-body').animate({ scrollTop: $('.main-body')[0].scrollHeight});
       }
-      console.log("success")
     })
     .fail(function() {
       alert('error');
